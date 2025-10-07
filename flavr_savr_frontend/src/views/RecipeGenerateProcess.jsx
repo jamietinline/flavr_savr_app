@@ -7,7 +7,8 @@ import FullRecipe from "../views/FullRecipe";
 
 export default function RecipeGenerateProcess() {
   const location = useLocation();
-  const API_URL = process.env.API_URL;
+    const API_URL = import.meta.env.VITE_API_URL ||
+        (window.location.hostname === 'localhost' ? 'http://localhost:3001' : window.location.origin);
    // Initial AI-generated ingredient list
   const initialReply = location.state?.reply;     
   // User-provided ingredient array   

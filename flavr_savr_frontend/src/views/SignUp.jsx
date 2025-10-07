@@ -9,7 +9,8 @@ export default function Signup() {
   const [password, setPassword] = useState("");
   const { setUser, setAccessToken } = useContext(UserContext);
   const navigate = useNavigate();
-  const API_URL = process.env.API_URL;
+    const API_URL = import.meta.env.VITE_API_URL ||
+        (window.location.hostname === 'localhost' ? 'http://localhost:3001' : window.location.origin);
 
   const handleSignup = async (e) => {
     e.preventDefault();

@@ -9,7 +9,8 @@ export default function OnboardingForm(){
   const { user, setUser } = useContext(UserContext);
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
-  const API_URL = process.env.API_URL;
+      const API_URL = import.meta.env.VITE_API_URL ||
+        (window.location.hostname === 'localhost' ? 'http://localhost:3001' : window.location.origin);
 
   // form states - initialize with existing user data if available
   const [formData, setFormData] = useState({

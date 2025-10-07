@@ -19,7 +19,8 @@ export default function SavedRecipes() {
   const [savedRecipes, setSavedRecipes] = useState([]);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  const API_URL = process.env.API_URL;
+    const API_URL = import.meta.env.VITE_API_URL ||
+        (window.location.hostname === 'localhost' ? 'http://localhost:3001' : window.location.origin);
   
   
   const navigate = useNavigate();

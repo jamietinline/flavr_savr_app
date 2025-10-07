@@ -6,7 +6,8 @@ export const UserContext = createContext();
 export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [accessToken, setAccessToken] = useState(null);
-  const API_URL = process.env.API_URL;
+  const API_URL = import.meta.env.VITE_API_URL ||
+    (window.location.hostname === 'localhost' ? 'http://localhost:3001' : window.location.origin);
   
   useEffect(() => {
     const refreshAndFetchUser = async () => {

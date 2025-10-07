@@ -9,7 +9,8 @@ import Loading from "../components/Loading";
 export default function Homepage(){
     const navigate = useNavigate();
     const { user } = useContext(UserContext);
-    const API_URL = process.env.API_URL;
+    const API_URL = import.meta.env.VITE_API_URL ||
+        (window.location.hostname === 'localhost' ? 'http://localhost:3001' : window.location.origin);
     
     // use state to show/hide the input bar for ingredients
     const [showSearch, setShowSearch] = useState(false);

@@ -7,7 +7,8 @@ import MainBtn from "../components/mainBtn";
 export default function Profile() {
   const { user, setUser, setAccessToken } = useContext(UserContext);
   const navigate = useNavigate();
-  const API_URL = process.env.API_URL;
+      const API_URL = import.meta.env.VITE_API_URL ||
+        (window.location.hostname === 'localhost' ? 'http://localhost:3001' : window.location.origin);
 
   const handleLogout = async () => {
     try {

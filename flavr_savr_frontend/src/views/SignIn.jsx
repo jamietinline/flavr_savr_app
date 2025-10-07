@@ -10,7 +10,8 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const { setUser, setAccessToken } = useContext(UserContext);
   const navigate = useNavigate();
-  const API_URL = process.env.API_URL;
+     const API_URL = import.meta.env.VITE_API_URL ||
+        (window.location.hostname === 'localhost' ? 'http://localhost:3001' : window.location.origin);
 
   const handleLogin = async (e) => {
     e.preventDefault();

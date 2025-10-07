@@ -15,7 +15,8 @@ export default function FullRecipe({
   const navigate = useNavigate();
   const { user } = useContext(UserContext);
   const [isSaved, setIsSaved] = useState(false);
-  const API_URL = process.env.API_URL;
+    const API_URL = import.meta.env.VITE_API_URL ||
+        (window.location.hostname === 'localhost' ? 'http://localhost:3001' : window.location.origin);
   
   const handleSaveRecipe = async () => {
     if (!user) {
