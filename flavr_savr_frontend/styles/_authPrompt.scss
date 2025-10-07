@@ -1,0 +1,33 @@
+.auth-prompt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 20px;
+}
+
+.auth-prompt-content {
+  text-align: center;
+  width: 400px;
+}
+
+.auth-prompt-content h2 {
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.auth-prompt-content p {
+  margin-bottom: 24px;
+  color: #666;
+  font-size: 16px;
+}
+
+.auth-prompt-buttons {
+  display: flex;
+  flex-direction: column; /* stack buttons vertically */
+  gap: 16px; /* space between buttons */
+  justify-content: center;
+  margin-top: 20px;
+}
+

@@ -1,0 +1,125 @@
+.ingredient-list-container{
+  display: flex;
+  flex-direction: column;
+  width: 384px;
+  height: 296px;
+  margin: 0 auto;
+  border: 1px solid #E0DEDA;
+  border-radius: 12px;
+  margin-top: 30px;
+  background: #F9F7F2;
+}
+
+.ingredient-list-title{
+  display:flex;
+  width: 334px;
+  font-size: 1rem;
+  padding-left: 25px;
+  padding-top:25px;
+}
+
+.ingredient-list-body{
+  display:flex;
+  width: 334px;
+  padding-left: 25px;
+  font-size: 1rem;
+}
+
+.refresh-btn-container{
+    display: flex;
+    justify-content: flex-end;
+    width:fit-content;
+    margin-left: auto;
+    align-items: center;
+    margin-right:40px;
+    margin-top:10px;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 60px;
+
+    p {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.refresh-btn-container:hover{
+    text-decoration: underline;
+}
+.refresh-icon{
+    height: 16px;
+    padding-right: 10px;
+}
+
+label{
+    display: block;
+    margin-bottom: 8px ;
+}
+
+.checklist-explain-text{
+    width: 380px;
+    margin: 0 auto;
+    padding-top: 50px;
+
+}
+.checkbox-list{
+    display: block;
+    width: 360px;
+    margin-left: 30px;
+    margin-top: 20px;
+    padding-right: 20px;
+    height: 380px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.checkbox-item-container{
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    background-color: #E0DEDA;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    border-radius: 100px;
+}
+
+.checkbox-item-container:hover{
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    background-color: #c9c5bd;
+}
+
+.recipe-ideas {
+    width: 380px;
+    margin: 30px auto;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 22px;
+    }
+}
+
+.recipe-idea {
+    background-color: #E0DEDA;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        border-color: rgba(0, 0, 0, 0.6);
+        background-color: #c9c5bd;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    &.selected {
+        border-color: #4CAF50;
+        border-width: 3px;
+        background-color: #d4f1d6;
+    }
+}
+

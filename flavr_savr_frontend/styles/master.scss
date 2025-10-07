@@ -1,0 +1,21 @@
+// global styling
+@use 'main';
+
+// components
+@use 'navbar';
+@use 'mainBtn';
+@use 'searchBtn';
+@use 'loading';
+@use 'authPrompt';
+
+// views
+@use 'recipeGenerateProcess';
+@use 'dietaryOnboarding';
+@use 'signUp';
+@use 'signIn';
+@use 'Profile';
+@use 'savedRecipes';
+
+
+
+

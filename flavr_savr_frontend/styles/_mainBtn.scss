@@ -1,0 +1,30 @@
+.main-btn-container{
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-top:30px;
+}
+
+
+.main-btn{
+  all: unset;
+  width: 380px;
+  height: 48px;
+  display: flex;
+  background: #DCF073;
+  border-radius: 60px;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  color: #1A443D;
+  border: 2px solid transparent;
+}
+
+.main-btn:hover{
+    border: 1px solid #1A443D;
+
+}
