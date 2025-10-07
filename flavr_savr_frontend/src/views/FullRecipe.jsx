@@ -20,7 +20,7 @@ export default function FullRecipe({
   
   const handleSaveRecipe = async () => {
     if (!user) {
-      navigate("/login");
+      navigate("/signin");
       return;
     }
 

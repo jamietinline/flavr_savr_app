@@ -4,6 +4,7 @@ import MainBtn from "../components/mainBtn"
 import SearchBtn from '../components/SearchBtn'
 import {UserContext} from "../contexts/UserContext";
 import Loading from "../components/Loading";
+import AuthPrompt from "../components/AuthPrompt";
 
 
 export default function Homepage(){
@@ -14,10 +15,11 @@ export default function Homepage(){
     
     // use state to show/hide the input bar for ingredients
     const [showSearch, setShowSearch] = useState(false);
-    
+    const [showAuthPrompt, setShowAuthPrompt] = useState(false);
+
     const handleInputClick = () => {
     if (!user) {
-        navigate("/signin");
+        setShowAuthPrompt(true);
         return;
     }
     setShowSearch(true); // show search input
@@ -81,6 +83,8 @@ export default function Homepage(){
 
     return(
     <>
+    {showAuthPrompt && <AuthPrompt />}
+
     <div className="header">
         <h1 className="page-title">Find a Recipe</h1>
     </div>

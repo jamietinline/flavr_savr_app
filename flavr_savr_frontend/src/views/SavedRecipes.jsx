@@ -26,7 +26,7 @@ export default function SavedRecipes() {
   const navigate = useNavigate();
   useEffect(() => {
     if (!user) {
-      navigate("/login");
+      navigate("/signin");
       return;
     }
 

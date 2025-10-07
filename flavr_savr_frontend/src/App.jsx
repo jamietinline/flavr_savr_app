@@ -6,7 +6,7 @@ import Home from "./views/Homepage";
 import SavedRecipes from "./views/SavedRecipes"
 import Profile from "./views/Profile"
 import RecipeGenerateProcess from "./views/RecipeGenerateProcess"
-import Login from "./views/SignIn"
+import SignIn from "./views/SignIn"
 import SignUp from "./views/SignUp"
 import ProtectedRoute from "./components/ProtectedRoute"
 import DietaryOnboarding from './views/DietaryOnboarding'
@@ -39,7 +39,7 @@ export default function App() {
     return () => window.removeEventListener("resize", scaleContainer);
   }, []);
 
-  const hideNavbarPaths = ["/login", "/signup", "/onboarding", "/preferences"];
+  const hideNavbarPaths = ["/signin", "/signup", "/onboarding", "/preferences"];
 
   return (
     <div className="app-container">
@@ -48,7 +48,7 @@ export default function App() {
        {/* Content that changes per route */}
       <div className="scrollable-content">
        <Routes>
-          <Route path="/login" element={<Login />} />
+          <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/" element={<Home />} />
           <Route path="/onboarding" element={<DietaryOnboarding />} />

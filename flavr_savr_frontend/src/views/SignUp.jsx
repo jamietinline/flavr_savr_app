@@ -66,7 +66,7 @@ export default function Signup() {
        <MainBtn className="submit" type="submit" text="Sign in"></MainBtn>
     </form>
 
-     <button className="back-btn" onClick={() => navigate("/login")}> Got an Account? Sign In</button> 
+     <button className="back-btn" onClick={() => navigate("/signin")}> Got an Account? Sign In</button> 
      </>
   );
 }
