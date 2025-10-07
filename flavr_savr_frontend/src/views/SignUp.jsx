@@ -9,12 +9,13 @@ export default function Signup() {
   const [password, setPassword] = useState("");
   const { setUser, setAccessToken } = useContext(UserContext);
   const navigate = useNavigate();
+  const API_URL = process.env.API_URL;
 
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:3001/auth/signup",
+        `${API_URL}/auth/signup`,
         { username, email, password },
         { withCredentials: true } // receive refresh token cookie
       );

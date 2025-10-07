@@ -15,6 +15,7 @@ export default function FullRecipe({
   const navigate = useNavigate();
   const { user } = useContext(UserContext);
   const [isSaved, setIsSaved] = useState(false);
+  const API_URL = process.env.API_URL;
   
   const handleSaveRecipe = async () => {
     if (!user) {
@@ -24,7 +25,7 @@ export default function FullRecipe({
 
     try {
       const res = await axios.post(
-        "http://localhost:3001/user/save-recipe",
+        `${API_URL}/user/save-recipe`,
         {
           title: recipeTitle,
           content: JSON.stringify(fullRecipe),

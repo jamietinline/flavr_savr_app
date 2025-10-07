@@ -7,11 +7,12 @@ import MainBtn from "../components/mainBtn";
 export default function Profile() {
   const { user, setUser, setAccessToken } = useContext(UserContext);
   const navigate = useNavigate();
+  const API_URL = process.env.API_URL;
 
   const handleLogout = async () => {
     try {
       await axios.post(
-        "http://localhost:3001/auth/logout",
+        `${API_URL}/auth/logout`,
         {},
         { withCredentials: true }
       );

@@ -9,6 +9,7 @@ export default function OnboardingForm(){
   const { user, setUser } = useContext(UserContext);
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
+  const API_URL = process.env.API_URL;
 
   // form states - initialize with existing user data if available
   const [formData, setFormData] = useState({
@@ -33,7 +34,7 @@ export default function OnboardingForm(){
 const handleFinish = async () => {
   try {
     const res = await axios.patch(
-      `http://localhost:3001/user/onboarding/${user._id}`,
+      `${API_URL}/user/onboarding/${user._id}`,
       {
         diet: formData.diet,
         dietOther: formData.dietOther,

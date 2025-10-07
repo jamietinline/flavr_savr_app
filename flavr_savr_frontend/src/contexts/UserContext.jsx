@@ -6,13 +6,14 @@ export const UserContext = createContext();
 export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [accessToken, setAccessToken] = useState(null);
-
+  const API_URL = process.env.API_URL;
+  
   useEffect(() => {
     const refreshAndFetchUser = async () => {
       try {
         // refresh access token
         const res = await axios.post(
-          "http://localhost:3001/auth/refresh",
+          `${API_URL}/auth/refresh`,
           {},
           { withCredentials: true }
         );
@@ -20,7 +21,7 @@ export const UserProvider = ({ children }) => {
         setAccessToken(accessToken);
 
         // fetch full user data from server
-        const userRes = await axios.get("http://localhost:3001/user/me", {
+        const userRes = await axios.get(`${API_URL}/user/me`, {
           headers: { Authorization: `Bearer ${accessToken}` },
           withCredentials: true,
         });

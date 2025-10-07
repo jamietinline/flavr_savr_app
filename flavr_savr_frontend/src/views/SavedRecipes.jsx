@@ -19,6 +19,7 @@ export default function SavedRecipes() {
   const [savedRecipes, setSavedRecipes] = useState([]);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const API_URL = process.env.API_URL;
   
   
   const navigate = useNavigate();
@@ -55,7 +56,7 @@ export default function SavedRecipes() {
     if (!confirm("Are you sure you want to delete this recipe?")) return;
 
     try {
-      await axios.delete(`http://localhost:3001/user/saved-recipes/${recipeId}`, {
+      await axios.delete(`${API_URL}/user/saved-recipes/${recipeId}`, {
         withCredentials: true,
       });
 

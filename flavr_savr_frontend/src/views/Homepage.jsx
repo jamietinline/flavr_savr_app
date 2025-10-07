@@ -9,6 +9,7 @@ import Loading from "../components/Loading";
 export default function Homepage(){
     const navigate = useNavigate();
     const { user } = useContext(UserContext);
+    const API_URL = process.env.API_URL;
     
     // use state to show/hide the input bar for ingredients
     const [showSearch, setShowSearch] = useState(false);
@@ -52,7 +53,7 @@ export default function Homepage(){
         setIsLoading(true);
         try{
             // remove local host part when pushing live.
-            const response = await fetch("http://localhost:3001/claude",{
+            const response = await fetch(`${API_URL}/claude`,{
                 method:"POST",
                 headers:{ "Content-Type": "application/json" },
                 credentials: "include", // send cookies

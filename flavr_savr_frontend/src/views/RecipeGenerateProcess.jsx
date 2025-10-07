@@ -7,6 +7,7 @@ import FullRecipe from "../views/FullRecipe";
 
 export default function RecipeGenerateProcess() {
   const location = useLocation();
+  const API_URL = process.env.API_URL;
    // Initial AI-generated ingredient list
   const initialReply = location.state?.reply;     
   // User-provided ingredient array   
@@ -49,7 +50,7 @@ export default function RecipeGenerateProcess() {
 
     try {
       // Call backend API to get refreshed ingredients
-      const res = await fetch("http://localhost:3001/claude/refresh", {
+      const res = await fetch(`${API_URL}/claude/refresh`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -84,7 +85,7 @@ export default function RecipeGenerateProcess() {
   setSelectedIngredients(selected);
 
   try {
-    const res = await fetch("http://localhost:3001/claude/recipe-ideas", {
+    const res = await fetch(`${API_URL}/claude/recipe-ideas`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ ingredients: selected }),
@@ -159,7 +160,7 @@ export default function RecipeGenerateProcess() {
 const handleGenerateFullRecipe = async (selectedRecipe, selectedIngredients) => {
   try {
     
-    const res = await fetch("http://localhost:3001/claude/full-recipe", {
+    const res = await fetch(`${API_URL}/claude/full-recipe`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
