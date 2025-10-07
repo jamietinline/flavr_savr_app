@@ -16,6 +16,10 @@ export default function Homepage(){
     const [showSearch, setShowSearch] = useState(false);
     
     const handleInputClick = () => {
+    if (!user) {
+        navigate("/signin");
+        return;
+    }
     setShowSearch(true); // show search input
     };
 
