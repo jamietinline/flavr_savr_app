@@ -22,9 +22,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 // CORS setup to allow frontend with cookies
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://flavrsavrapp.netlify.app"
+];
+
 app.use(
   cors({
-    origin: "http://localhost:3000", // your frontend URL
+    origin: allowedOrigins,
     credentials: true, // allow cookies
   })
 );
