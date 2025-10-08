@@ -1,30 +1,45 @@
 .main-btn-container{
-  width: 380px;
+  width: 384px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
   padding-top:30px;
+  
 }
-
 
 .main-btn{
   all: unset;
-  width: 380px;
+  width: 378px;
   height: 48px;
   display: flex;
   background: #DCF073;
+  border: 3px solid #d7eb73;
   border-radius: 60px;
-  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 6px rgba(198, 218, 99, 0.3);
+  cursor: pointer;
+  user-select: none;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
   color: #1A443D;
-  border: 2px solid transparent;
+  font-weight:500;
+
+  transition: background-color 0.25s ease, 
+              box-shadow 0.25s ease,
+              transform 0.15s ease;
+
 }
 
 .main-btn:hover{
-    border: 1px solid #1A443D;
+  background: #daee78;
+  box-shadow: 0px 6px 6px rgba(198, 218, 99, 0.4);
+  transform: translateY(-2px);
+}
 
+.main-btn:active {
+  /* push in effect */
+  box-shadow: 0px 3px 6px rgba(26, 68, 61, 0.2);
+  transform: translateY(0px); /* visually moves the button down */
 }

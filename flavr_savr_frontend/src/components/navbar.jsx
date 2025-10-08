@@ -3,12 +3,21 @@ import { FaHome } from "react-icons/fa";
 import { FaRegBookmark } from "react-icons/fa6";
 import { FaRegUser } from "react-icons/fa";
 import { IconContext } from "react-icons";
-import React from 'react';
+import { gsap } from "gsap";
+import { useRef, useEffect } from "react";
 
 export default function Navbar() {
+  const navbarRef = useRef(null);
 
+  useEffect(() => {
+    gsap.fromTo(
+      navbarRef.current,
+      { y: 100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.8, ease: "back.out(1.7)" }
+    );
+  }, []);
   return (
-    <div className="navbar-container">
+    <div ref={navbarRef} className="navbar-container">
       <NavLink
         to="/"
         end

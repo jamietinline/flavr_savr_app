@@ -81,7 +81,7 @@ export default function SavedRecipes() {
       <div className="header">
       <FaLongArrowAltLeft className="back-arrow" size={30}color="#1A443D" onClick={() => setSelectedRecipe(null)} /> 
       
-      <h1 className="page-title">Saved Recipes</h1>
+      <h2 className="page-title">Saved Recipes</h2>
 
       <MdDelete className="bin-recipe" size={30}color="#1A443D" onClick={() => handleDelete(selectedRecipe._id)} />
       </div>

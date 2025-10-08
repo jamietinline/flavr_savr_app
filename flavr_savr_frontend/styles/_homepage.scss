@@ -1,0 +1,55 @@
+
+.welcome-user{
+    margin-top: 60px;
+    display: inline-block;  
+    color: #DCF073;
+    font-style: italic;
+    background: #1A443D;
+    max-width: 300px;
+    width:220px;
+    text-align:center;
+    padding: 10px 20px;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    box-shadow: 0 6px 6px rgba(26, 68, 61, 0.2);
+}
+
+.caption-container{
+    padding-top: 40px;
+    margin: 0 auto;
+}
+
+.homepage-caption{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:330px;
+    background: #f7f5ee;
+    padding: 60px 30px; 
+    border-radius: 100px;
+    border: 3px solid #1A443D;
+    text-align: center;
+    box-shadow: 0 6px 6px rgba(26, 68, 61, 0.2);
+    height: 80px;
+}
+
+.ingredient-list-container{
+    display: flex;
+    flex-direction: column;
+    width: 384px;
+    height: 296px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background: #F9F7F2;
+    border: 3px solid rgb(241, 240, 236);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(26, 68, 61, 0.05);
+    overflow-y: auto;
+}
+
+.ingredient-list-body{
+  display:flex;
+  width: 334px;
+  padding-left: 25px;
+  font-size: 1rem;
+}

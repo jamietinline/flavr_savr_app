@@ -4,7 +4,7 @@ import MainBtn from "../components/mainBtn";
 import { MdRefresh } from "react-icons/md";
 import Loading from "../components/Loading";
 import { NavLink } from "react-router-dom";
-import ReactMarkdown from "react-markdown";
+import { FaLongArrowAltLeft } from "react-icons/fa";
 export default function IngredientChecklist({
   ingredientsReply,
   userIngredients,
@@ -51,7 +51,12 @@ export default function IngredientChecklist({
 
   return (
     <>
-      <h1 className="page-title">Ingredient Checklist</h1>
+       <div className="header">
+             <FaLongArrowAltLeft className="back-arrow" size={30}color="#1A443D"  /> 
+            
+              <h2 className="page-title">Ingredient Checklist</h2>
+      
+            </div>
 
       <p className="checklist-explain-text">
         Below are common household ingredients suited to your inputted ingredients.

@@ -9,12 +9,16 @@
 @use 'authPrompt';
 
 // views
-@use 'recipeGenerateProcess';
+@use 'homepage';
+@use 'ingredientChecklist';
+@use 'recipeIdeas';
 @use 'dietaryOnboarding';
+
 @use 'signUp';
 @use 'signIn';
 @use 'profile';
 @use 'savedRecipes';
+
 
 
 

@@ -2,20 +2,19 @@
     width: 415px;
     height: 48px;
     background-color: #1A443D;
-    
     align-items: center;
     position: absolute;
     left: 12.5px;
-    bottom: 44px;
+    bottom: 36px;
     display: flex;
     justify-content: space-around;
     border-radius: 60px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 6px rgb(26, 68, 61, 0.5);
 }
 
 /* Default button style */
 .navbar-btn-container {
-  width: 100px;
+  width: 96px;
   height: 35px;
   background: transparent; /* make default transparent */
   color: #DCF073;
@@ -24,22 +23,35 @@
   justify-content: center;
   align-items: center;
   transition:  0.3s, color 0.3s;
-   outline: none;
+  outline: none;
+
+  
+  transition: background-color 0.25s ease, 
+              color 0.25s ease,
+              box-shadow 0.25s ease,
+              transform 0.15s ease;
+  
 }
 
 /* Hover effect for all buttons */
 .navbar-btn-container:hover {
-  background: #DCF073;
+  background: #daee78;
   color: #1A443D;
+  box-shadow: 2px 4px 6px rgba(198, 218, 99, 0.1);
+  transform: translateY(-2px);
 }
 
 /* Active button style */
 .navbar-btn-container.active {
   background: #DCF073;
   color: #1A443D; 
+  transform: translateY(0px);
+  box-shadow: inset 0px 2px 3px rgba(26, 68, 61, 0.15);
+ 
 }
 
 /* Make sure react-icons inherit color */
 .navbar-btn-container svg {
   color: inherit;
+  transition: color 0.25s ease;
 }
